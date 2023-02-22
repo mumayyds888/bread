@@ -1,0 +1,15 @@
+.form-control-dark {
+  border-color: var(--bs-gray);
+}
+.form-control-dark:focus {
+  border-color: #fff;
+  box-shadow: 0 0 0 .05rem hsl(0, 14%, 85%);
+}
+
+.text-small {
+  font-size: 60%;
+}
+
+.dropdown-toggle {
+  outline: 0;
+}

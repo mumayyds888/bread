@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>參鋒麵包坊</title>
+    <link rel="icon" href="./小LOGO-5.png" type="imag/png">
+    <link rel="stylesheet" href="../_css/bootstrap.css">
+    <script src="../_js/bootstrap.js"></script>
+
+    <style>
+        body {
+            background: url("./body背景.jpg") center top no-repeat fixed;
+            background-size: cover;
+        }
+    </style>
+
+    <!-- NAVBAR -->
+
+    <style>
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        ul.drop-down-menu {
+            font-family: 'Open Sans', Arial, serif;
+            font-size: 13px;
+        }
+
+        ul.drop-down-menu li {
+            position: relative;
+            white-space: nowrap;
+        }
+
+        .navbar {
+            background-color: rgb(131, 71, 11);
+            text-align: center;
+            /* padding: 10px; */
+            position: inline-block;
+        }
+
+        .navbar li {
+            display: inline-block;
+            padding: 15px;
+        }
+
+        .nav:hover {
+            font-size: larger;
+            background-color: lightgrey;
+        }
+
+        .navbar li a {
+            color: rgb(234, 169, 105);
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .navbar li a:hover {
+            color: rgb(255, 243, 6);
+            text-decoration: underline;
+
+        }
+
+        .drop-down-menu ul {
+            display: none;
+        }
+
+        .search {
+            position: relative;
+            padding: 5px;
+            border-radius: 20px;
+            border: 1px solid lightgrey;
+        }
+    </style>
+
+    <!-- 宣傳主圖 -->
+    <style>
+        .carousel>.carousel-inner>.carousel-item>img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        /* 為啥沒效果 */
+        /* .carousel-item  {
+        backdrop-filter: brightness(50%); 
+
+    } */
+    </style>
+
+
+    <!--sidebar -->
+    <style>
+        .sidebar {
+            /* clip-path: circle(50%); */
+            width: 100px;
+            height: 300px;
+        }
+    </style>
+
+
+
+    <!-- 活動日曆 -->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        body {
+            font-family: Verdana, sans-serif;
+        }
+
+        .month {
+            padding: 70px 25px;
+            width: 100%;
+            background: #1abc9c;
+            text-align: center;
+        }
+
+        .month ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        .month ul li {
+            color: white;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .month .prev {
+            float: left;
+            padding-top: 10px;
+        }
+
+        .month .next {
+            float: right;
+            padding-top: 10px;
+        }
+
+        .weekdays {
+            margin: 0;
+            padding: 10px 0;
+            background-color: #ddd;
+        }
+
+        .weekdays li {
+            display: inline-block;
+            width: 13.6%;
+            color: #666;
+            text-align: center;
+        }
+
+        .days {
+            padding: 10px 0;
+            background: #eee;
+            margin: 0;
+        }
+
+        .days li {
+            list-style-type: none;
+            display: inline-block;
+            width: 13.6%;
+            text-align: center;
+            margin-bottom: 5px;
+            font-size: 12px;
+            color: #777;
+        }
+
+        .days li .active {
+            padding: 5px;
+            background: #1abc9c;
+            color: white !important
+        }
+    </style>
+
+
+    <!--日曆  -->
+    <style type="text/css">
+        td,
+        th {
+            padding: 10px;
+            background-color: lightgoldenrodyellow;
+        }
+
+        #calender25 {
+            background-color: rgb(78, 34, 3);
+
+        }
+
+        #calender25:hover {
+            background-color: chocolate;
+        }
+
+        #calender10 {
+            background-color: rgb(78, 34, 3);
+
+        }
+
+        #calender10:hover {
+            background-color: chocolate;
+        }
+
+        #calendar {
+            /* border-radius: 50%; */
+            border-width: 600px;
+            /* background-color: #666; */
+            position: relative;
+
+        }
+
+        #info {
+            position: relative;
+            top: 25%;
+            text-align: center;
+        }
+
+        #box1 {
+            position: relative;
+            /* right:70px; */
+        }
+
+        .circle1 {
+            display: block;
+            float: right;
+            position: relative;
+            width: 20rem;
+            height: 20rem;
+            background-color: rgb(167, 225, 167);
+            /* overflow: hidden; */
+            /* padding: 5%; */
+            border-radius: 50%;
+        }
+
+        #activitypp {
+            position: relative;
+            top: 20%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+        }
+    </style>
+
+    <!-- 影片欣賞 -->
+    <style>
+        .arrow {
+            width: 25px;
+            height: 25px;
+            transform: rotate(-225deg);
+            box-shadow: 10px 10px 0px 0 rgb(224, 214, 197);
+            position: relative;
+
+        }
+
+        .arrow::after {
+            content: "";
+            width: 40px;
+            height: 40px;
+            box-shadow: 10px 10px 0px 0 rgb(224, 214, 197);
+            position: absolute;
+            left: 20px;
+            top: 20px;
+        }
+
+        .arrow2 {
+            width: 25px;
+            height: 25px;
+            transform: rotate(-45deg);
+            box-shadow: 10px 10px 0px 0 rgb(224, 214, 197);
+            position: relative;
+
+        }
+
+        .arrow2::after {
+            content: "";
+            width: 40px;
+            height: 40px;
+            box-shadow: 10px 10px 0px 0 rgb(224, 214, 197);
+            position: absolute;
+            left: 20px;
+            top: 20px;
+        }
+    </style>
+
+
+
+    <style>
+        .fit {
+            background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgb(203, 185, 185));
+            border-radius: 0% 50px 50px 0%;
+
+
+
+        }
+
+        .fit2 {
+            background-image: linear-gradient(to left, rgba(255, 0, 0, 0), rgb(203, 185, 185));
+            border-radius: 50px 0% 0% 50px;
+
+        }
+    </style>
+
+    <!-- logo -->
+
+    <!-- 文字跑馬燈 -->
+    <style>
+        .marqee {
+            height: 2em;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+            background: black;
+        }
+
+        .marqee>ul {
+            padding-left: 0;
+            display: flex;
+            list-style-type: none;
+            animation: marqee 15s linear infinite;
+            position: absolute;
+        }
+
+        .marqee>ul>li {
+            white-space: nowrap;
+            margin-right: 2em;
+            font-weight: bold;
+            color: yellow;
+        }
+
+        @keyframes marqee {
+            0% {
+                left: 100%;
+                transform: translateX(0%);
+            }
+
+            100% {
+                left: 0;
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="marqee " style="background-color: rgb(92, 42, 3); text-align: center; 
+    font-weight: bolder">
+        <ul>
+            <li>歡迎光臨</li>
+            <li>參峰烘焙坊</li>
+            <li>當天現做</li>
+            <li>限量販售</li>
+            <li>要買要快呦</li>
+            <li>參峰烘焙坊</li>
+            <li>讓您越吃越順口</li>
+        </ul>
+    </div>
+    <nav class="navbar container-fluid sticky-top inline-block col-12 d-flex justify-content-center">
+        <!-- <div><img class="logo inline-block " src="./小LOGO-2.png"></div> -->
+        <!-- 問題已解決：因為畫布大小要設置成語圖片同樣寬高，才不會有留白現象 -->
+        <div class="col-3" title="歡迎收藏">
+            <img data-bs-toggle="popover7" src="./小LOGO-5.png" style="width:20%; height: 20%;">
+            <script>
+                const popover7TriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+                const popover7List = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+            </script>
+        </div>
+        <div class="list col-6">
+            <ul class="drop-down-menu">
+                <li class="drop"><a href="../1.首頁/首頁.html">
+                        <h6>首頁</h6>
+                    </a></li>
+                <li class="drop"><a href="../2.熱銷產品/熱銷產品.html">
+                        <h6>熱銷產品</h6>
+                    </a></li>
+                <li class="drop">
+                    <div>
+                        <a href="../3.所有產品/3.1所有產品.html">
+                            <h6>所有產品</h6>
+                        </a>
+                    </div>
+                    <!-- <div class="overflow" style="background-color: rgb(131, 71, 11);">
+                        <ul class="dropdown">
+                            <li><a href="../3.所有產品/3..1.2麵包蛋糕.html">
+                                    <h6>麵包蛋糕</h6>
+                                </a></li>
+                            <li><a href="../3.所有產品/3.1.1鋒味飲品.html">
+                                    <h6>鋒味飲品</h6>
+                                </a></li>
+                        </ul>
+                    </div> -->
+                </li>
+                <li class="drop"><a href="../4.加入會員/加入會員.html">
+                        <h6>加入會員</h6>
+                    </a></li>
+                <li class="drop"><a href="../5.客服中心/客服專區.html">
+                        <h6>客服專區</h6>
+                    </a></li>
+            </ul>
+        </div>
+        <div class=" col-3">
+            <input type="text" class="search" placeholder="search..."
+                style="background-color:#e3d6c5; margin-right:5px;">
+            <svg style="height: 10%; width:10%; margin-right:10px; margin-left:10px;" xmlns="http://www.w3.org/2000/svg"
+                width="16" height="16" fill="currentColor" class="bi bi-person-bounding-box" viewBox="0 0 16 16">
+                <path
+                    d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5z" />
+                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+            </svg>
+            <svg style="height: 10%; width:10%" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                <path
+                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+            </svg>
+        </div>
+
+    </nav>
+
+
+    <!-- 宣傳主圖 -->
+    <div class="breadcarousel" style="width: 100%;">
+        <div id="bread" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#bread" data-bs-slide-to="0" class="active" aria-current="true"
+                    aria-label="slide 1"></button>
+                <button type="button" data-bs-target="#bread" data-bs-slide-to="1" aria-label="slide 2"></button>
+                <button type="button" data-bs-target="#bread" data-bs-slide-to="2" aria-label="slide 3"></button>
+                <button type="button" data-bs-target="#bread " data-bs-slide-to="3" aria-label="slide 4"></button>
+                <button type="button" data-bs-target="#bread" data-bs-slide-to="4" aria-label="slide 5"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active " style="opacity: 80%;">
+                    <img src="./餐盤區.jpg">
+                </div>
+                <div class="carousel-item " style="opacity: 80%;">
+                    <img src="./櫥櫃區.jpg">
+                </div>
+                <div class="carousel-item " style="opacity: 80%;">
+                    <img src="./糕點區.jpg">
+                </div>
+                <div class="carousel-item " style="opacity: 80%">
+                    <img src="./咖啡區.jpg">
+                </div>
+                <div class="carousel-item " style="opacity: 80%">
+                    <img src="./茶飲區.jpg">
+                </div>
+            </div>
+
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#bread" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#bread" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+
+            <!-- 
+        <button class="carousel-control-prev" type="button" data-bs-target="#bread" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#bread" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button> -->
+        </div>
+    </div>
+
+
+
+
+
+    <!-- 主標題 -->
+    <div id="product" class="container" style=" text-align: center; padding: 80px;
+    font-size: 70px;">
+        <b>
+            <h1>熱銷產品
+        </b></h1>
+    </div>
+    <!-- 熱銷產品 -->
+    <div class="fit container d-flex align-items-center" style="width: 1000px;">
+        <img class="w3-border" style="padding:13px;width:50%;
+        width: 50%; height: 50%; border-radius:20px 30px 30px 20px ;
+        -webkit-filter:drop-shadow(5px 5px 5px rgb(70, 58, 20));
+        " src="./風味早點.jpg" alt="Norway">
+        <div class="">
+            <h3><b>天天鋒早點組</b></h3>
+            <h6>當天現做，用心傳遞最美好的感動！</h6>
+            <h6>為您準備當日所需麵包，簡單覆熱就能享用美味,</h6>
+            <h6>用麵包開啟美好的一天！</h6>
+            <h6><b>素</b></h6>
+            <h5><b>優惠售價</b></h5>
+            <h4 style=" color: tomato;"><b>NT $35</b></h4>
+            <h6 style="text-decoration: line-through;"><b>NT $50</b></h6>
+        </div>
+    </div>
+
+    <div style="height: 50px;"></div>
+
+    <div class="fit2 container d-flex align-items-center" style="width: 1000px;">
+        <div class="" style="text-align:right; margin-left: 200px;">
+            <h3><b>週週鋒點心組</b></h3>
+            <h6>當天現做，用心傳遞最美好的感動！</h6>
+            <h6>為您準備當日所需麵包，簡單覆熱就能享用美味,</h6>
+            <h6>用麵包開啟美好的一天！</h6>
+            <h6><b>素</b></h6>
+            <h5><b>優惠售價</b></h5>
+            <h4 style=" color: tomato;"><b>NT $35</b></h4>
+            <h6 style="text-decoration: line-through;"><b>NT $50</b></h6>
+        </div>
+        <img class="w3-border" style="padding:13px;width:50%; 
+        width: 50%; height: 50%; border-radius:20px 30px 30px 20px;
+        -webkit-filter:drop-shadow(5px 5px 5px rgb(70, 58, 20));
+        " src="./午後時光.jpg" alt="Norway">
+
+    </div>
+
+    <div style="height: 50px;"></div>
+
+    <div class="fit container d-flex align-items-center" style="width: 1000px;">
+        <div id="apple" class="carousel slide  d-flex justify-content-end" data-bs-ride="carousel" data-bs-interval="3000" 
+        style="width: 500px; ">
+            <div class="carousel-inner" style="margin-right: px;">
+                <div class="carousel-item active active">
+                    <img class="w3-border" style="padding:13px;width:50%;
+                width: 100%; height: 100%; border-radius:20px 30px 30px 20px ;
+                -webkit-filter:drop-shadow(5px 5px 5px rgb(70, 58, 20));
+                " src="./週末一.jpg" alt="Norway" >
+                </div>
+                <div class="carousel-item active">
+                    <img class="w3-border" style="padding:13px;width:50%;
+                width:  100%; height: 100%; border-radius:20px 30px 30px 20px ;
+                -webkit-filter:drop-shadow(5px 5px 5px rgb(70, 58, 20));
+                " src="./週末二.jpg" alt="Norway" >
+                </div>
+                <div class="carousel-item active w3-border">
+                    <img class="w3-border" style="padding:13px;width:50%;
+                width:  100%; height: 100%; border-radius:20px 30px 30px 20px ;
+                -webkit-filter:drop-shadow(5px 5px 5px rgb(70, 58, 20));
+                " src="./週末三.jpg" alt="Norway" >
+                </div>
+                <!--增加或減少圖片數量時，<div>圖片組要修正  -->
+            </div>
+            <div class="flex-column carousel-indicators d-flex justify-content-start " style="position:absolute; top:30%; margin-left:0px ;">
+                <button  style="padding-top: 15px; border-radius: 100px 100px 100px 100px;" type="button" data-bs-target="#apple" data-bs-slide-to="0" class="active" aria-current="true"
+                    aria-label="Slide 1"></button>
+                <button  style="padding-top: 15px; border-radius: 100px 100px 100px 100px;" type="button" data-bs-target="#apple" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button style="padding-top: 15px; border-radius: 100px 100px 100px 100px;" type="button" data-bs-target="#apple" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <!--增加或減少圖片數量時，bottom要修正  -->
+            </div>
+        </div>
+        <!--         
+        <img class="w3-border" style="padding:13px;width:50%;
+        width: 50%; height: 50%; border-radius:20px 30px 30px 20px ;
+        -webkit-filter:drop-shadow(5px 5px 5px rgb(70, 58, 20));
+        " src="./風味早點.jpg" alt="Norway"> -->
+        <div class="">
+            <h3><b>月月鋒週末組</b></h3>
+            <h6>當天現做，用心傳遞最美好的感動！</h6>
+            <h6>為您準備當日所需麵包，簡單覆熱就能享用美味,</h6>
+            <h6>用麵包開啟美好的一天！</h6>
+            <h6><b>素</b></h6>
+            <h5><b>優惠售價</b></h5>
+            <h4 style=" color: tomato;"><b>NT $35</b></h4>
+            <h6 style="text-decoration: line-through;"><b>NT $50</b></h6>
+        </div>
+
+    </div>
+
+    <!-- 活動日曆 -->
+    <div id="december22" style="height: 50px;"></div>
+    <div class="container d-flex justify-content-center">
+        <div class="arrow"></div>
+        <div>
+            <h2 style="color:rgb(224, 214, 197); font-weight: bolder; text-shadow:0px 0px 15px #000000;">活動月報</h2>
+        </div>
+        <div class="arrow2"></div>
+    </div>
+
+
+
+    <div id="calendar" class=" container d-flex justify-content-around align-items-center">
+        <!-- 日曆 -->
+        <div>
+            <div class="month rounded-top" style="background-color: rgb(122, 193, 205); height: 0px;">
+                <ul>
+                    <li class="prev">&#10094;</li>
+                    <li class="next">&#10095;</li>
+                    <li>
+                        December
+                        <br>
+                        <span style="font-size:18px">2022</span>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <table class="rounded mx-auto flex s-block" style="width:100%">
+                    <tbody>
+                        <tr>
+                            <th>Mo</th>
+                            <th>Tu</th>
+                            <th>We</th>
+                            <th>Th</th>
+                            <th>Fr</th>
+                            <th>Sa</th>
+                            <th>Su</th>
+                        </tr>
+                        <tr>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                        </tr>
+                        <tr>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td id="calender10" onclick="doActivity('10')">10</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                        </tr>
+                        <tr>
+                            <td id="calender25" onclick="doActivity('25')">25</span></td>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td>31</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 活動 -->
+        <div id="box1" class="circle1">
+            <div id="info">
+                <p id="activitypp">
+                <pre class="h5 font-weight-bold mb-3" id="doActivity_name"></pre>
+                </p>
+                <p id="activitypp">
+                <pre class="h5 font-weight-bold mb-3" id="doActivity_place"></pre>
+                </p>
+                <p id="activitypp">
+                <pre class="h5 font-weight-bold mb-3" id="doActivity_date"></pre>
+                </p>
+                <p id="activitypp">
+                <pre class="h5 font-weight-bold mb-3" id="doActivity_fee">請點10號與25號日期看活動資訊</pre>
+                </p>
+            </div>
+        </div>
+
+
+        <script>
+
+            const menu = {
+                '25': {
+                    'name': '參鋒烘培',
+                    'place': '場地 | 線上店鋪',
+                    'date': '日期 | 2022.25.',
+                    'fee': '優惠 | 買四送四'
+                },
+                '10': {
+                    'name': '鋒味烘培',
+                    'place': '場地 | 實體+線上',
+                    'date': '日期 | 2022.12.10',
+                    'fee': '優惠 | 買二送二'
+                },
+
+            }
+
+
+
+            function doActivity(date) {
+                document.getElementById("doActivity_name").innerHTML = menu[date]['name'];
+                document.getElementById("doActivity_place").innerHTML = menu[date]['place'];
+                document.getElementById("doActivity_date").innerHTML = menu[date]['date'];
+                document.getElementById("doActivity_fee").innerHTML = menu[date]['fee'];
+            }
+
+            // function doActivity() {
+            //     document.getElementById("box1").style.display = "block";
+            //     // return box1;
+            // }
+
+            // function doActivity() {
+            //     document.getElementById("box1").style.display = "none";
+            //     return box1;
+            // }
+
+        </script>
+
+    </div>
+
+
+    <!-- 影片欣賞 -->
+    <div id="makevideo" style="height: 50px;"></div>
+    <div class="container d-flex justify-content-center">
+        <div class="arrow"></div>
+        <div>
+            <h2 style="color:rgb(224, 214, 197); font-weight: bolder; text-shadow:0px 0px 15px #000000;">精選影片</h2>
+        </div>
+        <div class="arrow2"></div>
+    </div>
+    <iframe class="container d-flex align-content-center" width="642" height="361"
+        src="https://www.youtube.com/embed/t13VhwCpskk" title="最舒壓的台式麵包！早餐必學款：帕瑪森＆大蒜起司軟法麵包" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+
+    <!-- footer -->
+    <div class="container">
+        <footer class="d-flex flex-nowrap justify-content-between align-items-center py-3 my-4 border-top"
+            style="background-color: rgba(105, 105, 105, 0.126); ">
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="/" class="mb-3 me-1 mb-md-0 text-muted text-decoration-none lh-1 ">
+                    <svg class="bi" width="30" height="24">
+                        <use xlink:href="#bootstrap" />
+                    </svg>
+                </a>
+                <div class="row ">
+                    <p class="text-muted" style="width: 500px; ">CopyRight &copy;
+                        金鋒烘焙坊
+                        Design by QiQi</p>
+                    <p class="text-muted color" style="width: 500px; color: #000000;">客服專線：(02)6666-8888</p>
+                    <p class=" text-muted" style="width: 500px;">客服信箱：QiQiforyoy@breadsweet.com.tw</p>
+                </div>
+        </footer>
+    </div>
+
+
+    <!-- Sidebar -->
+    <div class="sidebar " style="position: fixed; right:0; bottom: 0; ">
+        <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none;" id="mySidebar">
+            <div title="收">
+                <svg data-bs-toggle="popover0" onclick="w3_close()" class="w3-bar-item w3-large"
+                    style="position: fixed; right:0; bottom: 300px; border-radius: 10px; height: 50px; width: 50px; color: rgb(244, 139, 10); background-color: rgba(0, 0, 0, 0);"
+                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-diamond"
+                    viewBox="0 0 16 16">
+                    &times
+                    <path
+                        d="M6.95.435c.58-.58 1.52-.58 2.1 0l6.515 6.516c.58.58.58 1.519 0 2.098L9.05 15.565c-.58.58-1.519.58-2.098 0L.435 9.05a1.482 1.482 0 0 1 0-2.098L6.95.435zm1.4.7a.495.495 0 0 0-.7 0L1.134 7.65a.495.495 0 0 0 0 .7l6.516 6.516a.495.495 0 0 0 .7 0l6.516-6.516a.495.495 0 0 0 0-.7L8.35 1.134z" />
+                </svg>
+                <script>
+                    const popover0TriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+                    const popover0List = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+                </script>
+            </div>
+            <!--Close &times;  -->
+
+
+            <div class="row">
+                <div title="精選影片">
+                    <a href="#makevideo" class="w3-bar-item w3-button">
+                        <svg data-bs-toggle="popover3"
+                            style="color:rgb(56, 55, 55); position: fixed; right:0; bottom: 250px;  height: 50px; width: 50px;"
+                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-dice-3-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M3 0a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V3a3 3 0 0 0-3-3H3zm2.5 4a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm8 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zM8 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                            精選影片
+                        </svg></a>
+                    <script>
+                        const popover3TriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+                        const popover3List = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+                    </script>
+                </div>
+                <div title="活動月報">
+                    <a href="#december22" class="w3-bar-item w3-button">
+                        <svg data-bs-toggle="popover2"
+                            style="color:rgb(82, 81, 81);  position: fixed; right:0; bottom: 200px;  height: 50px; width: 50px;"
+                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-dice-2-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M0 3a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H3a3 3 0 0 1-3-3V3zm5.5 1a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0zm6.5 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+                            活動月報
+                        </svg></a>
+                    <script>
+                        const popover2TriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+                        const popover2List = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+                    </script>
+                </div>
+                <div title="熱銷產品">
+                    <a href="#product" class="w3-bar-item w3-button">
+                        <svg data-bs-toggle="popover1"
+                            style="color:#666; position: fixed; right:0; bottom: 150px;  height: 50px; width: 50px;"
+                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-dice-1-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M3 0a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V3a3 3 0 0 0-3-3H3zm5 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                            熱銷產品
+                        </svg></a>
+                    <script>
+                        const popover1TriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+                        const popover1List = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="w3-teal" title="歡迎點開">
+            <svg data-bs-toggle="popover" onclick="w3_open()" id="mySidebarAnother"
+                style="position: fixed; right:0; bottom: 100px; border-radius: 10px; height: 50px; width: 50px; color: rgb(244, 139, 10); background-color: rgba(0, 0, 0, 0);"
+                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-diamond-fill"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M6.95.435c.58-.58 1.52-.58 2.1 0l6.515 6.516c.58.58.58 1.519 0 2.098L9.05 15.565c-.58.58-1.519.58-2.098 0L.435 9.05a1.482 1.482 0 0 1 0-2.098L6.95.435z" />
+            </svg>
+            <script>
+                const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+                const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+            </script>
+        </div>
+
+        <!-- 其他形式的按鈕  -->
+        <!-- Close &times; -->
+        <!-- ☰ -->
+
+        <script>
+            function w3_open() {
+                document.getElementById("mySidebar").style.display = "block";
+
+            }
+
+            function w3_close() {
+                document.getElementById("mySidebar").style.display = "none";
+            }
+        </script>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- 回頂部
+    為啥加了跑馬燈後沒有反應 -->
+    <a href="#top"><svg
+            style="position: fixed; right:0; bottom: 0; border-radius: 10px; height: 50px; width: 50px; color: aliceblue; background-color: rgba(0, 0, 0, 0.856);"
+            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
+        </svg></a>
+
+
+
+</body>
+
+</html>
+
+<!-- https://jimmyswebnote.com/css-animation-transition-transform-animation/ -->

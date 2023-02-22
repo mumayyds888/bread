@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+
+
+</head>
+
+<body>
+    <div id="pic" style="OVERFLOW: hidden; width:1024">
+        <table width="100%" cellpadding=0 cellspace=0  border=0 bgcolor="0">
+            <tr>
+                <td id="pic1">
+                    <table>
+                        <tr>
+                            <td><a rel="nofollow" href="點擊圖片會連結到" target=_blank><img src="./大熱狗.psd(去背).png"
+                                        height="500" border=0></td>
+                            <td><a rel="nofollow" href="點擊圖片會連結到" target=_blank><img src="./奶酥圓包.png" height="500" border=0></td>
+                            <td><a rel="nofollow" href="點擊圖片會連結到" target=_blank><img src="./巧克力.png" height="500" border=0></td>
+                            <td><a rel="nofollow" href="點擊圖片會連結到" target=_blank><img src="./核桃卷.psd(去背).png"
+                                        height="500" border=0></td>
+                            <td><a rel="nofollow" href="點擊圖片會連結到" target=_blank border=0><img src="./波羅.psd(去背).png"
+                                        height="500"></td>
+                            <td><a rel="nofollow" href="點擊圖片會連結到" target=_blank border=0><img src="漢堡.png" height="500"></td>
+                            <td><a rel="nofollow" href="點擊圖片會連結到" target=_blank border=0><img src="./蔥卷.psd(去背).png"
+                                        height="500"></td>
+                            <td><a rel="nofollow" href="點擊圖片會連結到" target=_blank border=0><img src="./草莓夾心包.png" height="500">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td id="pic2"></td>
+            </tr>
+
+
+            <script>
+                var speed = 30
+                pic2.innerHTML = pic1.innerHTML
+                pic.scrollLeft = pic.scrollWidth
+                function Marquee() {
+                    if (pic.scrollLeft <= 0)
+                        pic.scrollLeft += pic2.offsetWidth
+                    else {
+                        pic.scrollLeft--
+                    }
+                }
+                var MyMar = setInterval(Marquee, speed)
+                pic.onmouseover = function () { clearInterval(MyMar) }
+                pic.onmouseout = function () { MyMar = setInterval(Marquee, speed) }
+            </script>
+        </table>
+    </div>
+</body>
+
+
+
+
+<!-- 二 -->
+
+
+    <!-- 熱銷商品圖片跑馬燈 -->
+    <!-- <div id="pic" style="OVERFLOW: hidden; width:1024;">
+        <table width="100%" cellpadding=0 cellspace=0 border=0>
+            <tr>
+                <td id="pic1" style="background-color: rgb(131, 71, 11);">
+                    <table>
+                        <tr>
+                            <td style="background-color: rgb(182, 97, 13);"><a rel="nofollow" target=_blank><img
+                                        src="./大熱狗.psd(去背).png" height="250" border=0></td>
+                            <td style="background-color: rgb(182, 97, 13);"><a rel="nofollow" target=_blank><img
+                                        src="./奶酥圓包.png" height="250" border=0></td>
+                            <td style="background-color: rgb(182, 97, 13);"><a rel="nofollow" target=_blank><img
+                                        src="./巧克力.png" height="250" border=0></td>
+                            <td style="background-color: rgb(182, 97, 13);"><a rel="nofollow" target=_blank><img
+                                        src="./核桃卷.psd(去背).png" height="250" border=0></td>
+                            <td style="background-color: rgb(182, 97, 13);"><a rel="nofollow" target=_blank><img
+                                        src="./波羅.psd(去背).png" height="250" border=0></td>
+                            <td style="background-color: rgb(182, 97, 13);"><a rel="nofollow" target=_blank><img
+                                        src="漢堡.png" height="250" border=0></td>
+                            <td style="background-color: rgb(182, 97, 13);"><a rel="nofollow" target=_blank><img
+                                        src="./蔥卷.psd(去背).png" height="250" border=0></td>
+                            <td style="background-color: rgb(182, 97, 13);"><a rel="nofollow" target=_blank><img
+                                        src="./草莓夾心包.png" height="250" border=0>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td id="pic2" style="background-color: rgb(131, 71, 11);"></td>
+            </tr> -->
+
+    <!-- 跑馬燈JS -->
+    <script>
+        var speed = 30
+        pic2.innerHTML = pic1.innerHTML
+        pic.scrollLeft = pic.scrollWidth
+        function Marquee() {
+            if (pic.scrollLeft <= 0)
+                pic.scrollLeft += pic2.offsetWidth
+            else {
+                pic.scrollLeft--
+            }
+        }
+        var MyMar = setInterval(Marquee, speed)
+        pic.onmouseover = function () { clearInterval(MyMar) }
+        pic.onmouseout = function () { MyMar = setInterval(Marquee, speed) }
+    </script>
+    </table>
+    </div>
+
+
+
+</html>
+
+<!-- http://trade.1111.com.tw/web/meworks/run.html -->

@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>參鋒麵包坊</title>
+    <link rel="icon" href="./小LOGO-5.png" type="imag/png">
+    <link rel="stylesheet" href="../_css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="../_js/bootstrap.js"></script>
+
+
+    <style>
+        h1 {
+            text-align: center;
+            padding: 120px;
+            font-size: 90px;
+        }
+    </style>
+    <style>
+        #bbb {
+
+            width: 300px;
+            height: 50px;
+            border: 1px solid rgb(214, 177, 54);
+            background-color: rgb(214, 177, 54);
+            /* position:absolute; top:50%; left: 50%;; */
+        }
+    </style>
+
+    <style>
+        body {
+            background: url("./背景.jpg") center top no-repeat fixed;
+            background-size: cover;
+        }
+    </style>
+    <!-- 文字跑馬燈 -->
+    <style>
+        .marqee {
+            height: 2em;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+            background: black;
+        }
+
+        .marqee>ul {
+            padding-left: 0;
+            display: flex;
+            list-style-type: none;
+            animation: marqee 15s linear infinite;
+            position: absolute;
+        }
+
+        .marqee>ul>li {
+            white-space: nowrap;
+            margin-right: 2em;
+            font-weight: bold;
+            color: yellow;
+        }
+
+        @keyframes marqee {
+            0% {
+                left: 100%;
+                transform: translateX(0%);
+            }
+
+            100% {
+                left: 0;
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+
+    <!-- NAVBAR -->
+
+    <style>
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        ul.drop-down-menu {
+            font-family: 'Open Sans', Arial, serif;
+            font-size: 13px;
+        }
+
+        ul.drop-down-menu li {
+            position: relative;
+            white-space: nowrap;
+        }
+
+        .navbar {
+            background-color: rgb(131, 71, 11);
+            text-align: center;
+            /* padding: 10px; */
+            position: inline-block;
+        }
+
+        .navbar li {
+            display: inline-block;
+            padding: 15px;
+        }
+
+        .nav:hover {
+            font-size: larger;
+            background-color: lightgrey;
+        }
+
+        .navbar li a {
+            color: rgb(234, 169, 105);
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .navbar li a:hover {
+            color: rgb(255, 243, 6);
+            text-decoration: underline;
+
+        }
+
+        .drop-down-menu ul {
+            display: none;
+        }
+
+        .search {
+            position: relative;
+            padding: 5px;
+            border-radius: 20px;
+            border: 1px solid lightgrey;
+        }
+    </style>
+
+
+    <!-- 宣傳主圖 -->
+    <style>
+        .carousel>.carousel-inner>.carousel-item>img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        /* 為啥沒效果 */
+        /* .carousel-item  {
+            backdrop-filter: brightness(50%); 
+
+        } */
+    </style>
+
+    <style>
+        h1 {
+            height: 300px;
+        }
+    </style>
+
+    <style>
+        .listcard1 {
+            /* background-color: rgb(227, 217, 201); */
+            width: 250px;
+            height: 10%;
+            text-align: center;
+            box-shadow: 1px 2px 5px #000000;
+        }
+
+        .listcard2 {
+            /* background-color: rgb(135, 90, 12); */
+            width: 250px;
+            height: 10%;
+            text-align: center;
+            box-shadow: 1px 2px 5px #000000;
+        }
+    </style>
+
+    <!-- DIV疊加 -->
+    <style>
+        #breadcake {
+            position: relative;
+            margin-top: -20px;
+            /* left: 50%; */
+
+        }
+    </style>
+
+    <!-- 按鈕 -->
+    <style>
+        .btn {
+            box-shadow: 1px 2px 5px #000000;
+        }
+    </style>
+
+
+
+
+</head>
+
+<body>
+
+
+    <div class="marqee " style="background-color: rgb(92, 42, 3); text-align: center; 
+    font-weight: bolder">
+        <ul>
+            <li>歡迎光臨</li>
+            <li>參峰烘焙坊</li>
+            <li>當天現做</li>
+            <li>限量販售</li>
+            <li>要買要快呦</li>
+            <li>參峰烘焙坊</li>
+            <li>讓您越吃越順口</li>
+        </ul>
+    </div>
+    <nav class="navbar container-fluid sticky-top inline-block col-12 d-flex justify-content-center">
+        <!-- <div><img class="logo inline-block " src="./小LOGO-2.png"></div> -->
+        <!-- 問題已解決：因為畫布大小要設置成語圖片同樣寬高，才不會有留白現象 -->
+        <div class="col-3" title="歡迎收藏">
+            <img data-bs-toggle="popover8" src="./小LOGO-5.png" style="width:20% ; height: 20%;">
+            <script>
+                const popover8TriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+                const popover8List = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+            </script>
+        </div>
+        <div class="list col-6">
+            <ul class="drop-down-menu">
+                <li class="drop"><a href="../1.首頁/首頁.html">
+                        <h6>首頁</h6>
+                    </a></li>
+                <li class="drop"><a href="../2.熱銷產品/熱銷產品.html">
+                        <h6>熱銷產品</h6>
+                    </a></li>
+                <li class="drop">
+                    <div>
+                        <a href="../3.所有產品/3.1所有產品.html">
+                            <h6>所有產品</h6>
+                        </a>
+                    </div>
+                    <div class="overflow" style="background-color: rgb(131, 71, 11);">
+                        <ul class="dropdown">
+                            <li><a href="../3.所有產品/3..1.2麵包蛋糕.html">
+                                    <h6>麵包蛋糕</h6>
+                                </a></li>
+                            <li><a href="../3.所有產品/3.1.1鋒味飲品.html">
+                                    <h6>鋒味飲品</h6>
+                                </a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="drop"><a href="../4.加入會員/加入會員.html">
+                        <h6>加入會員</h6>
+                    </a></li>
+                <li class="drop"><a href="../5.客服中心/客服專區.html">
+                        <h6>客服專區</h6>
+                    </a></li>
+            </ul>
+        </div>
+        <div class=" col-3">
+            <input type="text" class="search" placeholder="search..."
+                style="background-color:#e3d6c5; margin-right:5px;">
+            <svg style="height: 10%; width:10%; margin-right:10px; margin-left:10px;" xmlns="http://www.w3.org/2000/svg"
+                width="16" height="16" fill="currentColor" class="bi bi-person-bounding-box" viewBox="0 0 16 16">
+                <path
+                    d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5z" />
+                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+            </svg>
+            <svg style="height: 10%; width:10%" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                <path
+                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+            </svg>
+        </div>
+
+    </nav>
+
+    <!-- 注意id與#符號的關係、div區塊概念再加強、注意小符號前後空格，也會影響程式跑動問題、container-fluid 要去掉才不會左右兩邊留空白-->
+    <!-- 宣傳主圖 -->
+    <div class="breadcarousel" style="width: 100%;">
+        <div id="bread" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#bread" data-bs-slide-to="0" class="active" aria-current="true"
+                    aria-label="slide 1"></button>
+                <button type="button" data-bs-target="#bread" data-bs-slide-to="1" aria-label="slide 2"></button>
+                <button type="button" data-bs-target="#bread" data-bs-slide-to="2" aria-label="slide 3"></button>
+                <button type="button" data-bs-target="#bread " data-bs-slide-to="3" aria-label="slide 4"></button>
+                <button type="button" data-bs-target="#bread" data-bs-slide-to="4" aria-label="slide 5"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active " style="opacity: 80%;">
+                    <img src="./所有產品Cel1.jpg">
+                </div>
+                <div class="carousel-item " style="opacity: 80%;">
+                    <img src="./所有產品Cel2.jpg">
+                </div>
+                <div class="carousel-item " style="opacity: 80%;">
+                    <img src="./所有產品Cel3.jpg">
+                </div>
+                <div class="carousel-item " style="opacity: 80%">
+                    <img src="./所有產品Cel4.jpg">
+                </div>
+                <div class="carousel-item " style="opacity: 80%">
+                    <img src="./所有產品Cel5.jpg">
+                </div>
+            </div>
+
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#bread" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#bread" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+
+            <!-- 
+            <button class="carousel-control-prev" type="button" data-bs-target="#bread" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#bread" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button> -->
+        </div>
+    </div>
+
+    <!-- 主標題 -->
+    <h1 class="container-fluid d-flex justify-content-center" style="position:absolute; top:80px; color:rgb(223, 133, 8);
+        font-weight:bold ">所有產品</h1>
+
+
+    <!-- 麵包蛋糕 -->
+    <div id="breadcake" class="container" style="background-color: rgb(84, 56, 7)">
+        <div style="background-color: rgb(84, 56, 7)">
+            <div class="container-fluid inline-block d-flex justify-content-around rounded-bottom "
+                style="background-color: rgb(224, 214, 197);">
+                <svg class="d-flex" style="width: 20%px; height: 50px; color: rgb(138, 95, 8);"
+                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-shop-window" viewBox="0 0 16 16">
+                    <path
+                        d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h12V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zm2 .5a.5.5 0 0 1 .5.5V13h8V9.5a.5.5 0 0 1 1 0V13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5a.5.5 0 0 1 .5-.5z" />
+                </svg>
+                <h5 class="d-flex  align-items-center" style="height: 50px; color: rgb(138, 95, 8); font-weight: bolder; font-size: 20px;
+                text-decoration: underline;">麵包蛋糕</h5>
+                <svg class="d-flex" style="width: 20%px; height: 50px; color: rgb(138, 95, 8);"
+                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-cup-straw" viewBox="0 0 16 16" style="width: 20%px; height: 50px; ">
+                    <path
+                        d="M13.902.334a.5.5 0 0 1-.28.65l-2.254.902-.4 1.927c.376.095.715.215.972.367.228.135.56.396.56.82 0 .046-.004.09-.011.132l-.962 9.068a1.28 1.28 0 0 1-.524.93c-.488.34-1.494.87-3.01.87-1.516 0-2.522-.53-3.01-.87a1.28 1.28 0 0 1-.524-.93L3.51 5.132A.78.78 0 0 1 3.5 5c0-.424.332-.685.56-.82.262-.154.607-.276.99-.372C5.824 3.614 6.867 3.5 8 3.5c.712 0 1.389.045 1.985.127l.464-2.215a.5.5 0 0 1 .303-.356l2.5-1a.5.5 0 0 1 .65.278zM9.768 4.607A13.991 13.991 0 0 0 8 4.5c-1.076 0-2.033.11-2.707.278A3.284 3.284 0 0 0 4.645 5c.146.073.362.15.648.222C5.967 5.39 6.924 5.5 8 5.5c.571 0 1.109-.03 1.588-.085l.18-.808zm.292 1.756C9.445 6.45 8.742 6.5 8 6.5c-1.133 0-2.176-.114-2.95-.308a5.514 5.514 0 0 1-.435-.127l.838 8.03c.013.121.06.186.102.215.357.249 1.168.69 2.438.69 1.27 0 2.081-.441 2.438-.69.042-.029.09-.094.102-.215l.852-8.03a5.517 5.517 0 0 1-.435.127 8.88 8.88 0 0 1-.89.17zM4.467 4.884s.003.002.005.006l-.005-.006zm7.066 0-.005.006c.002-.004.005-.006.005-.006zM11.354 5a3.174 3.174 0 0 0-.604-.21l-.099.445.055-.013c.286-.072.502-.149.648-.222z" />
+                </svg>
+            </div>
+            <br>
+            <div class="container-fluid inline-block d-flex justify-content-around">
+                <div class="listcard1 d-flex flex-column align-content-center flex-wrap rounded-bottom">
+                    <img class="bd-highlight" style="width: 100%; height: 20%;" src="./蛋糕麵包/牛奶圓包.png" alt="">
+                    <div style="background-color: rgb(224, 214, 197); border-radius: 10px; border-width: 10px;">
+                        <h6 class="bd-highlight">牛奶圓包</h6>
+                        <h6 class="bd-highlight ">NT. 25 / 顆</h6>
+                        <div class="bd-highlight ">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <select
+                                    style="background-color: rgb(224, 214, 197); text-align: center; border: none; padding:8px">
+                                    <option value=""><a class="dropdown-item" href="#">數量</a>
+                                    </option>
+                                    <option value=""><a class="dropdown-item" href="#">1</a>
+                                    </option>
+                                    <option value=""><a class="dropdown-item" href="#">2</a>
+                                    </option>
+                                    <option value=""><a class="dropdown-item" href="#">3</a>
+                                    </option>
+                                    <option value=""><a class="dropdown-item" href="#">4</a>
+                                    </option>
+                                    <option value=""><a class="dropdown-item" href="#">5</a>
+                                    </option>
+                                </select>
+                            </ul>
+                        </div>
+                        <button id="cadbtn" class="btn btn-defaul bd-highlight border border-1"
+                            style=" background-color: rgb(224, 214, 197); ">+購物車</button>
+                    </div>
+                </div>
+
+                <div class="listcard1 d-flex flex-column align-content-center flex-wrap">
+                    <img class="bd-highlight" style="width: 100%; height: 20%;" src="./蛋糕麵包/芋頭麻糬圓包.png" alt="">
+                    <div style="background-color: rgb(224, 214, 197); border-radius: 10px; border-width: 10px;">
+                        <h6 class="bd-highlight">芋頭麻糬圓包</h6>
+                        <h6 class="bd-highlight ">NT. 25 / 顆</h6>
+                        <div class="bd-highlight ">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <select
+                                    style="background-color: rgb(224, 214, 197); text-align: center; border: none; padding:8px">
+                                    <option value=""><a class="dropdown-item" href="#">數量</a>
+                                    </option>
+                                    <option value=""><a class="dropdown-item" href="#">1</a>
+                                    </option>
+                                    <option value=""><a class="dropdown-item" href="#">2</a>
+                                    </option>
+                                    <option value=""><a class="dropdown-item" href="#">3</a>
+                                    </option>
+                                    <option value=""><a class="dropdown-item" href="#">4</a>
+                                    </option>
+                                    <option value=""><a class="dropdown-item" href="#">5</a>
+                                    </option>
+                                </select>
+                            </ul>
+                        </div>
+                        <button id="cadbtn" class="btn btn-defaul bd-highlight border border-1"
+                            style=" background-color: rgb(224, 214, 197); ">+購物車</button>
+                    </div>
+                </div>
+
+                <div class="listcard1 d-flex flex-column align-content-center flex-wrap">
+                    <img class="bd-highlight" style="width: 100%; height: 20%;" src="./蛋糕麵包/紅豆麻糬圓包.png" alt="">
+                    <div style="background-color: rgb(224, 214, 197); border-radius: 10px; border-width: 10px;">
+                        <h6 class="bd-highlight">紅豆麻糬圓包</h6>
+                        <h6 class="bd-highlight ">NT. 25 / 顆</h6>
+                        <div class="bd-highlight ">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <select
+                                    style="background-color: rgb(224, 214, 197); text-align: center; border: none; padding:8px">
+                                    <option value=""><a class="dropdown-item" href="#">數量</a>
+                                    </option>
+                                    <option value=""><a class="dropdown-item" href="#">1</a>
+                                    </option>
+                                    <option value=""><a class="dropdown-item" href="#">2</a>
+                                    </option>
+                                    <option value=""><a class="dropdown-item" href="#">3</a>
+                                    </option>
+                                    <option value=""><a class="dropdown-item" href="#">4</a>
+                                    </option>
+                                    <option value=""><a class="dropdown-item" href="#">5</a>
+                                    </option>
+                                </select>
+                            </ul>
+                        </div>
+                        <button id="cadbtn" class="btn btn-defaul bd-highlight border border-1"
+                            style=" background-color: rgb(224, 214, 197); ">+購物車</button>
+                    </div>
+                </div>
+
+                <div class="listcard1 d-flex flex-column align-content-center flex-wrap">
+                    <img class="bd-highlight" style="width: 100%; height: 20%;" src="./蛋糕麵包/甜甜圈.png" alt="">
+                    <div style="background-color: rgb(224, 214, 197); border-radius: 10px; border-width: 10px;">
+                        <h6 class="bd-highlight">甜甜圈</h6>
+                        <h6 class="bd-highlight ">NT. 25 / 顆</h6>
+                        <div class="bd-highlight ">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <select
+                                    style="background-color: rgb(224, 214, 197); text-align: center; border: none; padding:8px">
+                                    <option value=""><a class="dropdown-item" href="#">數量</a>
+                                    </option>
+                                    <option value=""><a class="dropdown-item" href="#">1</a>
+                                    </option>
+                                    <option value=""><a class="dropdown-item" href="#">2</a>
+                                    </option>
+                                    <option value=""><a class="dropdown-item" href="#">3</a>
+                                    </option>
+                                    <option value=""><a class="dropdown-item" href="#">4</a>
+                                    </option>
+                                    <option value=""><a class="dropdown-item" href="#">5</a>
+                                    </option>
+                                </select>
+                            </ul>
+                        </div>
+                        <button id="cadbtn" class="btn btn-defaul bd-highlight border border-1"
+                            style=" background-color: rgb(224, 214, 197); ">+購物車</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <!-- 麵包蛋糕之二 -->
+        <div id="breadcake" class="container" style="background-color: rgb(84, 56, 7)">
+            <div style="background-color: rgb(84, 56, 7)">
+                <br>
+                <div class="container-fluid inline-block d-flex justify-content-around">
+                    <div class="listcard1 d-flex flex-column align-content-center flex-wrap rounded-bottom">
+                        <img class="bd-highlight" style="width: 100%; height: 20%;" src="./蛋糕麵包/起酥奶酥包.png" alt="">
+                        <div style="background-color: rgb(224, 214, 197); border-radius: 10px; border-width: 10px;">
+                            <h6 class="bd-highlight">起酥奶酥包</h6>
+                            <h6 class="bd-highlight ">NT. 35 / 顆</h6>
+                            <div class="bd-highlight ">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <select
+                                        style="background-color: rgb(224, 214, 197); text-align: center; border: none; padding:8px">
+                                        <option value=""><a class="dropdown-item" href="#">數量</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">1</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">2</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">3</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">4</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">5</a>
+                                        </option>
+                                    </select>
+                                </ul>
+                            </div>
+                            <button id="cadbtn" class="btn btn-defaul bd-highlight border border-1"
+                                style=" background-color: rgb(224, 214, 197); ">+購物車</button>
+                        </div>
+                    </div>
+
+                    <div class="listcard1 d-flex flex-column align-content-center flex-wrap">
+                        <img class="bd-highlight" style="width: 100%; height: 20%;" src="./蛋糕麵包/肉鬆卷.png" alt="">
+                        <div style="background-color: rgb(224, 214, 197); border-radius: 10px; border-width: 10px;">
+                            <h6 class="bd-highlight ">肉鬆卷</h6>
+                            <h6 class="bd-highlight ">NT. 25</h6>
+                            <div class="bd-highlight ">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <select
+                                        style="background-color: rgb(224, 214, 197); text-align: center; border: none; padding:8px">
+                                        <option value=""><a class="dropdown-item" href="#">數量</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">1</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">2</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">3</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">4</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">5</a>
+                                        </option>
+                                    </select>
+                                </ul>
+                            </div>
+                            <button id="cadbtn" class="btn btn-defaul bd-highlight border border-1"
+                                style=" background-color: rgb(224, 214, 197); ">+購物車</button>
+                        </div>
+                    </div>
+
+                    <div class="listcard1 d-flex flex-column align-content-center flex-wrap">
+                        <img class="bd-highlight" style="width: 100%; height: 20%;" src="./蛋糕麵包/橘子三角蛋糕.png" alt="">
+                        <div style="background-color: rgb(224, 214, 197); border-radius: 10px; border-width: 10px;">
+                            <h6 class="bd-highlight ">橘子三角蛋糕</h6>
+                            <h6 class="bd-highlight ">NT. 35 / 顆</h6>
+                            <div class="bd-highlight ">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <select
+                                        style="background-color: rgb(224, 214, 197); text-align: center; border: none; padding:8px">
+                                        <option value=""><a class="dropdown-item" href="#">數量</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">1</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">2</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">3</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">4</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">5</a>
+                                        </option>
+                                    </select>
+                                </ul>
+                            </div>
+                            <button id="cadbtn" class="btn btn-defaul bd-highlight border border-1"
+                                style=" background-color: rgb(224, 214, 197); ">+購物車</button>
+                        </div>
+                    </div>
+
+                    <div class="listcard1 d-flex flex-column align-content-center flex-wrap">
+                        <img class="bd-highlight" style="width: 100%; height: 20%;" src="./蛋糕麵包/紅豆蛋糕卷.png" alt="">
+                        <div style="background-color: rgb(224, 214, 197); border-radius: 10px; border-width: 10px;">
+                            <h6 class="bd-highlight ">紅豆蛋糕卷</h6>
+                            <h6 class="bd-highlight ">NT. 35 / 顆</h6>
+                            <div class="bd-highlight ">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <select
+                                        style="background-color: rgb(224, 214, 197); text-align: center; border: none; padding:8px">
+                                        <option value=""><a class="dropdown-item" href="#">數量</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">1</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">2</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">3</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">4</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">5</a>
+                                        </option>
+                                    </select>
+                                </ul>
+                            </div>
+                            <button id="cadbtn" class="btn btn-defaul bd-highlight border border-1"
+                                style=" background-color: rgb(224, 214, 197); ">+購物車</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div id="gap" class="" style="width: 800px; height:80px"></div>
+            <!-- 鋒味飲品 -->
+            <div id="coffeetea" class="container" style="background-color: rgb(135, 90, 12);">
+                <div class="container-fluid inline-block rounded-bottom 
+d-flex justify-content-around" style="background-color: rgb(224, 214, 197); ">
+                    <svg class="d-flex" style="width: 20%px; height: 50px; color: rgb(138, 95, 8);"
+                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-shop-window" viewBox="0 0 16 16">
+                        <path
+                            d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h12V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zm2 .5a.5.5 0 0 1 .5.5V13h8V9.5a.5.5 0 0 1 1 0V13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5a.5.5 0 0 1 .5-.5z" />
+                    </svg>
+                    <h5 class="d-flex  align-items-center" style="height: 50px; color: rgb(138, 95, 8); font-weight: bolder; font-size: 20px;
+                text-decoration: underline;">鋒味飲品</h5>
+                    <svg class="d-flex" style="width: 20%px; height: 50px; color: rgb(138, 95, 8);"
+                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-cup-straw" viewBox="0 0 16 16" style="width: 20%px; height: 50px; ">
+                        <path
+                            d="M13.902.334a.5.5 0 0 1-.28.65l-2.254.902-.4 1.927c.376.095.715.215.972.367.228.135.56.396.56.82 0 .046-.004.09-.011.132l-.962 9.068a1.28 1.28 0 0 1-.524.93c-.488.34-1.494.87-3.01.87-1.516 0-2.522-.53-3.01-.87a1.28 1.28 0 0 1-.524-.93L3.51 5.132A.78.78 0 0 1 3.5 5c0-.424.332-.685.56-.82.262-.154.607-.276.99-.372C5.824 3.614 6.867 3.5 8 3.5c.712 0 1.389.045 1.985.127l.464-2.215a.5.5 0 0 1 .303-.356l2.5-1a.5.5 0 0 1 .65.278zM9.768 4.607A13.991 13.991 0 0 0 8 4.5c-1.076 0-2.033.11-2.707.278A3.284 3.284 0 0 0 4.645 5c.146.073.362.15.648.222C5.967 5.39 6.924 5.5 8 5.5c.571 0 1.109-.03 1.588-.085l.18-.808zm.292 1.756C9.445 6.45 8.742 6.5 8 6.5c-1.133 0-2.176-.114-2.95-.308a5.514 5.514 0 0 1-.435-.127l.838 8.03c.013.121.06.186.102.215.357.249 1.168.69 2.438.69 1.27 0 2.081-.441 2.438-.69.042-.029.09-.094.102-.215l.852-8.03a5.517 5.517 0 0 1-.435.127 8.88 8.88 0 0 1-.89.17zM4.467 4.884s.003.002.005.006l-.005-.006zm7.066 0-.005.006c.002-.004.005-.006.005-.006zM11.354 5a3.174 3.174 0 0 0-.604-.21l-.099.445.055-.013c.286-.072.502-.149.648-.222z" />
+                    </svg>
+                </div>
+                <br>
+                <div class="container-fluid inline-block d-flex justify-content-around">
+                    <div class="listcard2 d-flex flex-column align-content-center flex-wrap">
+                        <img class="bd-highlight" style="width: 100%; height: 20%;" src="./鋒味飲品/美式1.png" alt="">
+                        <div style="background-color: rgb(224, 214, 197); border-radius: 10px; border-width: 10px;">
+                            <h6 class="bd-highlight ">美式</h6>
+                            <h6 class="bd-highlight ">NT. 40 / 杯</h6>
+                            <div class="bd-highlight ">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <select
+                                        style="background-color: rgb(224, 214, 197); text-align: center; border: none; padding:8px">
+                                        <option value=""><a class="dropdown-item" href="#">數量</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">1</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">2</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">3</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">4</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">5</a>
+                                        </option>
+                                    </select>
+                                </ul>
+                            </div>
+                            <button id="cadbtn" class="btn btn-defaul bd-highlight border border-1"
+                                style=" background-color: rgb(224, 214, 197); ">+購物車</button>
+                        </div>
+                    </div>
+
+                    <div class="listcard2 d-flex flex-column align-content-center flex-wrap">
+                        <img class="bd-highlight" style="width: 100%; height: 20%;" src="./鋒味飲品/卡布奇諾1.png" alt="">
+                        <div style="background-color: rgb(224, 214, 197); border-radius: 10px; border-width: 10px;">
+                            <h6 class="bd-highlight ">卡布奇諾</h6>
+                            <h6 class="bd-highlight ">NT. 45 / 杯</h6>
+                            <div class="bd-highlight ">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <select
+                                        style="background-color: rgb(224, 214, 197); text-align: center; border: none; padding:8px">
+                                        <option value=""><a class="dropdown-item" href="#">數量</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">1</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">2</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">3</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">4</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">5</a>
+                                        </option>
+                                    </select>
+                                </ul>
+                            </div>
+                            <button id="cadbtn" class="btn btn-defaul bd-highlight border border-1"
+                                style=" background-color: rgb(224, 214, 197); ">+購物車</button>
+                        </div>
+                    </div>
+
+                    <div class="listcard2 d-flex flex-column align-content-center flex-wrap">
+                        <img class="bd-highlight" style="width: 100%; height: 20%;" src="./鋒味飲品/摩卡1.png" alt="">
+                        <div style="background-color: rgb(224, 214, 197); border-radius: 10px; border-width: 10px;">
+                            <h6 class="bd-highlight ">摩卡</h6>
+                            <h6 class="bd-highlight ">NT. 45 / 杯</h6>
+                            <div class="bd-highlight ">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <select
+                                        style="background-color: rgb(224, 214, 197); text-align: center; border: none; padding:8px">
+                                        <option value=""><a class="dropdown-item" href="#">數量</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">1</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">2</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">3</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">4</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">5</a>
+                                        </option>
+                                    </select>
+                                </ul>
+                            </div>
+                            <button id="cadbtn" class="btn btn-defaul bd-highlight border border-1"
+                                style=" background-color: rgb(224, 214, 197); ">+購物車</button>
+                        </div>
+                    </div>
+
+
+
+                    <div class="listcard2 d-flex flex-column align-content-center flex-wrap">
+                        <img class="bd-highlight" style="width: 100%; height: 20%;" src="./鋒味飲品/焦糖瑪奇朵1.png" alt="">
+                        <div style="background-color: rgb(224, 214, 197); border-radius: 10px; border-width: 10px;">
+                            <h6 class="bd-highlight ">焦糖瑪奇朵</h6>
+                            <h6 class="bd-highlight ">NT. 50 / 杯</h6>
+                            <div class="bd-highlight ">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <select
+                                        style="background-color: rgb(224, 214, 197); text-align: center; border: none; padding:8px">
+                                        <option value=""><a class="dropdown-item" href="#">數量</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">1</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">2</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">3</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">4</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">5</a>
+                                        </option>
+                                    </select>
+                                </ul>
+                            </div>
+                            <button id="cadbtn" class="btn btn-defaul bd-highlight border border-1"
+                                style=" background-color: rgb(224, 214, 197); ">+購物車</button>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="container-fluid inline-block d-flex justify-content-around">
+                    <div class="listcard2 d-flex flex-column align-content-center flex-wrap">
+                        <img class="bd-highlight" style="width: 100%; height: 20%;" src="./鋒味飲品/奶茶1.png" alt="">
+                        <div style="background-color: rgb(224, 214, 197); border-radius: 10px; border-width: 10px;">
+                            <h6 class="bd-highlight ">奶茶</h6>
+                            <h6 class="bd-highlight ">NT. 20 / 杯</h6>
+                            <div class="bd-highlight ">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <select
+                                        style="background-color: rgb(224, 214, 197); text-align: center; border: none; padding:8px">
+                                        <option value=""><a class="dropdown-item" href="#">數量</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">1</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">2</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">3</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">4</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">5</a>
+                                        </option>
+                                    </select>
+                                </ul>
+                            </div>
+                            <button id="cadbtn" class="btn btn-defaul bd-highlight border border-1"
+                                style=" background-color: rgb(224, 214, 197); ">+購物車</button>
+                        </div>
+                    </div>
+
+                    <div class="listcard2 d-flex flex-column align-content-center flex-wrap">
+                        <img class="bd-highlight" style="width: 100%; height: 20%;" src="./鋒味飲品/紅茶1.png" alt="">
+                        <div style="background-color: rgb(224, 214, 197); border-radius: 10px; border-width: 10px;">
+                            <h6 class="bd-highlight ">紅茶</h6>
+                            <h6 class="bd-highlight ">NT. 15 / 杯</h6>
+                            <div class="bd-highlight ">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <select
+                                        style="background-color: rgb(224, 214, 197); text-align: center; border: none; padding:8px">
+                                        <option value=""><a class="dropdown-item" href="#">數量</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">1</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">2</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">3</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">4</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">5</a>
+                                        </option>
+                                    </select>
+                                </ul>
+                            </div>
+                            <button id="cadbtn" class="btn btn-defaul bd-highlight border border-1"
+                                style=" background-color: rgb(224, 214, 197); ">+購物車</button>
+                        </div>
+                    </div>
+
+                    <div class="listcard2 d-flex flex-column align-content-center flex-wrap">
+                        <img class="bd-highlight" style="width: 100%; height: 20%;" src="./鋒味飲品/綠茶1.png" alt="">
+                        <div style="background-color: rgb(224, 214, 197); border-radius: 10px; border-width: 10px;">
+                            <h6 class="bd-highlight ">綠茶</h6>
+                            <h6 class="bd-highlight ">NT. 15 / 杯</h6>
+                            <div class="bd-highlight ">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <select
+                                        style="background-color: rgb(224, 214, 197); text-align: center; border: none; padding:8px">
+                                        <option value=""><a class="dropdown-item" href="#">數量</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">1</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">2</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">3</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">4</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">5</a>
+                                        </option>
+                                    </select>
+                                </ul>
+                            </div>
+                            <button id="cadbtn" class="btn btn-defaul bd-highlight border border-1"
+                                style=" background-color: rgb(224, 214, 197); ">+購物車</button>
+                        </div>
+                    </div>
+                    <div class="listcard2 d-flex flex-column align-content-center flex-wrap">
+                        <img class="bd-highlight" style="width: 100%; height: 20%;" src="./鋒味飲品/青茶1.png" alt="">
+                        <div style="background-color: rgb(224, 214, 197); border-radius: 10px; border-width: 10px;">
+                            <h6 class="bd-highlight ">青茶</h6>
+                            <h6 class="bd-highlight ">NT. 20 / 杯</h6>
+                            <div class="bd-highlight ">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <select
+                                        style="background-color: rgb(224, 214, 197); text-align: center; border: none; padding:8px">
+                                        <option value=""><a class="dropdown-item" href="#">數量</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">1</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">2</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">3</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">4</a>
+                                        </option>
+                                        <option value=""><a class="dropdown-item" href="#">5</a>
+                                        </option>
+                                    </select>
+                                </ul>
+                            </div>
+                            <button id="cadbtn" class="btn btn-defaul bd-highlight border border-1"
+                                style=" background-color: rgb(224, 214, 197); ">+購物車</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+        <!-- footer -->
+
+        <div class="container">
+            <footer class="d-flex flex-nowrap justify-content-between align-items-center py-3 my-4 border-top"
+                style="background-color: rgba(105, 105, 105, 0.126); ">
+                <div class="col-md-4 d-flex align-items-center">
+                    <a href="/" class="mb-3 me-1 mb-md-0 text-muted text-decoration-none lh-1 ">
+                        <svg class="bi" width="30" height="24">
+                            <use xlink:href="#bootstrap" />
+                        </svg>
+                    </a>
+                    <div class="row ">
+                        <p class="text-muted" style="width: 500px; ">CopyRight &copy;
+                            金鋒烘焙坊
+                            Design by QiQi</p>
+                        <p class="text-muted color" style="width: 500px; color: #000000;">客服專線：(02)6666-8888</p>
+                        <p class=" text-muted" style="width: 500px;">客服信箱：QiQiforyoy@breadsweet.com.tw</p>
+                    </div>
+            </footer>
+        </div>
+
+
+        <!-- sidebar -->
+
+        <!-- Sidebar -->
+        <div class="sidebar " style="position: fixed; right:0; bottom: 0; ">
+            <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none;" id="mySidebar">
+                <div title="收">
+                    <svg data-bs-toggle="popover0" onclick="w3_close()" class="w3-bar-item w3-large"
+                        style="position: fixed; right:0; bottom: 250px; border-radius: 10px; height: 50px; width: 50px; color: rgb(244, 139, 10); background-color: rgba(0, 0, 0, 0);"
+                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-diamond" viewBox="0 0 16 16">
+                        &times
+                        <path
+                            d="M6.95.435c.58-.58 1.52-.58 2.1 0l6.515 6.516c.58.58.58 1.519 0 2.098L9.05 15.565c-.58.58-1.519.58-2.098 0L.435 9.05a1.482 1.482 0 0 1 0-2.098L6.95.435zm1.4.7a.495.495 0 0 0-.7 0L1.134 7.65a.495.495 0 0 0 0 .7l6.516 6.516a.495.495 0 0 0 .7 0l6.516-6.516a.495.495 0 0 0 0-.7L8.35 1.134z" />
+                    </svg>
+                    <script>
+                        const popover0TriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+                        const popover0List = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+                    </script>
+                </div>
+                <!--Close &times;  -->
+
+
+                <div class="row">
+                    <div title="鋒味飲品">
+                        <a href="#coffeetea" class="w3-bar-item w3-button">
+                            <svg data-bs-toggle="popover2"
+                                style="color:rgb(82, 81, 81);  position: fixed; right:0; bottom: 200px;  height: 50px; width: 50px;"
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-dice-2-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 3a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H3a3 3 0 0 1-3-3V3zm5.5 1a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0zm6.5 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+                                活動月報
+                            </svg></a>
+                        <script>
+                            const popover2TriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+                            const popover2List = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+                        </script>
+                    </div>
+                    <div title="麵包蛋糕">
+                        <a href="#breadcake" class="w3-bar-item w3-button">
+                            <svg data-bs-toggle="popover1"
+                                style="color:#666; position: fixed; right:0; bottom: 150px;  height: 50px; width: 50px;"
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-dice-1-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 0a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V3a3 3 0 0 0-3-3H3zm5 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                                熱銷產品
+                            </svg></a>
+                        <script>
+                            const popover1TriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+                            const popover1List = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-teal" title="歡迎點開">
+                <svg data-bs-toggle="popover" onclick="w3_open()" id="mySidebarAnother"
+                    style="position: fixed; right:0; bottom: 100px; border-radius: 10px; height: 50px; width: 50px; color: rgb(244, 139, 10); background-color: rgba(0, 0, 0, 0);"
+                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-diamond-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M6.95.435c.58-.58 1.52-.58 2.1 0l6.515 6.516c.58.58.58 1.519 0 2.098L9.05 15.565c-.58.58-1.519.58-2.098 0L.435 9.05a1.482 1.482 0 0 1 0-2.098L6.95.435z" />
+                </svg>
+                <script>
+                    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+                    const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+                </script>
+            </div>
+
+            <!-- 其他形式的按鈕  -->
+            <!-- Close &times; -->
+            <!-- ☰ -->
+
+            <script>
+                function w3_open() {
+                    document.getElementById("mySidebar").style.display = "block";
+
+                }
+
+                function w3_close() {
+                    document.getElementById("mySidebar").style.display = "none";
+                }
+            </script>
+        </div>
+
+
+        <!-- 回頂部 -->
+
+        <a href="#top"><svg
+                style="position: fixed; right:0; bottom: 0; border-radius: 10px; height: 50px; width: 50px; color: aliceblue; background-color: rgba(0, 0, 0, 0.856);"
+                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
+            </svg></a>
+
+
+
+
+
+</body>
+
+</html>
+
+<!-- https://icons.getbootstrap.com/icons/caret-right-square-fill/ -->
+<!-- [jQuery] 按下加到購物車後，物品飛到購物車的效果：https://tools.wingzero.tw/article/sn/497 -->

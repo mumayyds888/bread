@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+
+    <style>
+        body {
+            font-family: 'Lucida Grande', 'Helvetica', sans-serif;
+        }
+
+        button {
+            background-color: transparent;
+            border-width: 0px;
+            outline: none;
+        }
+
+        svg {
+            width: 50px;
+            height: 100%;
+            background-color: transparent;
+            border-width: 0px;
+            outline: none;
+        }
+
+
+
+        button:hover>svg {
+            color: red;
+        }
+
+        #breadBtn {
+            /* position: fixed; */
+            position: relative;
+
+            padding: bottom 10px;
+            /* left: 0%;  */
+        }
+
+        
+    </style>
+
+</head>
+
+<body>
+    <div class="bg-success" style="width: 110px;">
+        <div id="codBtn" class=" bg-dark d-flex container"
+            style="position: flex; bottom: 0px;  height: min-content; width: min-content; ">
+            <button onclick="toastShow('金風烘焙坊！',2000);" style="height: fit-content; width: fit-content; ">
+                <svg xmlns="http://www.w3.org/2000/svg" width="4" height="4" fill="currentColor"
+                    class="bi bi-geo-alt-fill" viewBox="-5 -5 30 30" type="button">
+                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                </svg></button>
+
+        </div>
+
+        <div id="breadBtn" class="box bg-light" style="width: 110px;  text-align: center; border-radius: 20px;">
+            <p style="border-width: 5px;">金風烘焙坊</p>
+        </div>
+    </div>
+
+    <script>
+        //浮出店名框
+
+        function toastShow() {
+            document.getElementById("breadBtn").style.left = event.clientX + "px";
+            document.getElementById("breadBtn").style.top = event.clientY + "px";
+
+
+
+            // duration = isNaN(duration) ? 3000 : msg;
+            // var m = document.createElement('div');
+            // m.innerHTML = msg;
+            // m.style.cssText = "width:150px;  height:40px; background:#000; color:#fff; line-height:40px; text-align:center; border-radius:5px; font-weight:bold;";
+            // document.body.appendChild(m);
+
+            //     setTimeout(function () {
+            //         var d = 0.5;
+            //         m.style.webkitTransition = '-webkit-transform ' + d + 's ease-in, opacity ' + d + 's ease-in';
+            //         m.style.opacity = '0';
+            //         setTimeout(function () { document.body.removeChild(m) }, d * 1000);
+            //     }, duration);
+        }
+
+
+        // function toastHide() {
+        //     document.getElementById("breadBtn").style.all =  "px"
+        // }
+
+        document.getElementById("breadBtn").onclick = toastShow;
+
+            // document.getElementById("breadBtn").onclick = toastHide;
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../_css/bootstrap.css">
+    <script src="../_js/bootstrap.js"></script>
+
+    <style>
+        #activity_content {
+            border: 10px solid rgb(193, 119, 119);
+            background-color: rgb(185, 207, 71);
+            padding: 5px;
+            border-radius: 100px;
+            
+            /* margin: auto; */
+            /* flex-direction: row; */
+            /* justify-content: flex-end; */
+            width: 1000px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div>
+        <table class="rounded mx-auto flex s-block">
+            <tbody>
+                <tr>
+                    <td>27</td>
+                    <td>28</td>
+                    <td>29</td>
+                    <td>30</td>
+                    <td>01</td>
+                    <td>02</td>
+                    <td>03</td>
+                </tr>
+                <tr>
+                    <td>04</td>
+                    <td>05</td>
+                    <td>06</td>
+                    <td>07</td>
+                    <td>08</td>
+                    <td>09</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>17</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
+                    <td id="calender22">22</td>
+                    <td>23</td>
+                    <td>24</td>
+                </tr>
+                <tr>
+                    <td>25</td>
+                    <td>26</td>
+                    <td>27</td>
+                    <td>28</td>
+                    <td id="calender29 " class="bg-primary" onclick="show_avtivity(date)">29</td>
+                    <td>30</td>
+                    <td>31</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    <div class="col-md live_detail">
+        <div id="band_name" class="band_name" style="color: #ccc;"></div>
+        <div id="activity_content" class="live_detail_content">
+            <p>
+            <pre class="h5 font-weight-bold mb3" id="activity_place"></pre>
+            </p>
+            <p>
+            <pre class="h5 font-weight-bold mb3" id="activity_date"></pre>
+            </p>
+            <p>
+            <pre class="h5 font-weight-bold mb3" id="activity_time"></pre>
+            </p>
+            <p>
+            <pre class="h5 font-weight-bold" id="activity_money">點日期看活動資訊</pre>
+            </p>
+
+        </div>
+
+        <script>
+            const menu = {
+                '22': {
+                    'name': '甜約翰',
+                    'place': '場地 | 店內演出',
+                    'date': '日期 | 2022.12.20',
+                    'time': '時間 | 20:00',
+                    'money': '兩杯飲料',
+                }
+                // '29': {
+                //     'name':'溫蒂漫步',
+                //     'place':'場地 | 戶外演出',
+                //     'date':' 日期 | 2022.12.31',
+                //     'time':'時間 | 22:00',
+                //     'money':'費用 | 兩杯飲料',
+                // }
+
+            }
+
+            function show_avtivity(date) {
+                document.grElementById('band_name').innerHTML = menu[data['name']];
+                document.grElementById('band_place').innerHTML = menu[data['place']];
+                document.grElementById('band_date').innerHTML = menu[data['date']];
+                document.grElementById('band_time').innerHTML = menu[data['time']];
+                document.grElementById('band_mony').innerHTML = menu[data['mony']];
+            }
+        </script>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
+
+<!-- https://ithelp.ithome.com.tw/articles/10241348?sc=hot -->

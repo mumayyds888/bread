@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>自定义Toast，类似于android的Toast</title>
+
+
+    <style>
+        body {
+            font-family: 'Lucida Grande', 'Helvetica', sans-serif;
+        }
+
+        button {
+            background-color: transparent;
+            border-width: 0px;
+            outline: none;
+        }
+
+        svg {
+            width: 100px;
+            height: 100%;
+            background-color: transparent;
+            border-width: 0px;
+            outline: none;
+        }
+
+        button:hover>svg {
+            color: red;
+        }
+    </style>
+
+
+
+</head>
+
+
+<body>
+    
+
+    <button onclick="Toast('金風麵包坊！',2000);">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" 
+        class="bi bi-geo-alt-fill" viewBox="0 0 16 16" type="button" id="liveToastBtn">
+        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+        </svg></button>
+
+</body>
+
+<script>
+    //自定义弹框  
+    function Toast(msg, duration) {
+        duration = isNaN(duration) ? 3000 : duration;
+        var m = document.createElement('div');
+        m.innerHTML = msg;
+        m.style.cssText = "width:30%; min-width:150px; background:#000; height:40px;  opacity:0.5; color:#fff; line-height:40px; text-align:center; border-radius:5px; position:fixed; top:40%; left:20%; z-index:999999; font-weight:bold;";
+        document.body.appendChild(m);
+
+        // setTimeout(function () {
+        //     var d = 0.5;
+        //     m.style.webkitTransition = '-webkit-transform ' + d + 's ease-in, opacity ' + d + 's ease-in';
+        //     m.style.opacity = '0';
+        //     setTimeout(function () { document.body.removeChild(m) }, d * 1000);
+        // }, duration);
+    }  
+</script>
+
+</html>
+
+<!-- <button onclick="Toast('您點擊了按鈕！',2000);">Toast</button> -->

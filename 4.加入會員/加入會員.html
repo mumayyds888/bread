@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>參鋒麵包坊</title>
+    <link rel="icon" href="./小LOGO-5.png" type="imag/png">
+    <link rel="stylesheet" href="../_css/bootstrap.css">
+    <script src="../_js/bootstrap.js"></script>
+
+    <style>
+        body {
+            background: url("./加入會員封面3\(1440-1024\).png") center top no-repeat fixed;
+            background-size: cover;
+        }
+    </style>
+
+
+    <!-- 文字跑馬燈 -->
+    <style>
+        .marqee {
+            height: 2em;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+            background: black;
+        }
+
+        .marqee>ul {
+            padding-left: 0;
+            display: flex;
+            list-style-type: none;
+            animation: marqee 15s linear infinite;
+            position: absolute;
+        }
+
+        .marqee>ul>li {
+            white-space: nowrap;
+            margin-right: 2em;
+            font-weight: bold;
+            color: yellow;
+        }
+
+        @keyframes marqee {
+            0% {
+                left: 100%;
+                transform: translateX(0%);
+            }
+
+            100% {
+                left: 0;
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+
+    <!-- NAVBAR -->
+
+    <style>
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        ul.drop-down-menu {
+            font-family: 'Open Sans', Arial, serif;
+            font-size: 13px;
+        }
+
+        ul.drop-down-menu li {
+            position: relative;
+            white-space: nowrap;
+        }
+
+        .navbar {
+            background-color: rgb(131, 71, 11);
+            text-align: center;
+            /* padding: 10px; */
+            position: inline-block;
+        }
+
+        .navbar li {
+            display: inline-block;
+            padding: 15px;
+        }
+
+        .nav:hover {
+            font-size: larger;
+            background-color: lightgrey;
+        }
+
+        .navbar li a {
+            color: rgb(234, 169, 105);
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .navbar li a:hover {
+            color: rgb(255, 243, 6);
+            text-decoration: underline;
+
+        }
+
+        .drop-down-menu ul {
+            display: none;
+        }
+
+        .search {
+            position: relative;
+            padding: 5px;
+            border-radius: 20px;
+            border: 1px solid lightgrey;
+        }
+    </style>
+
+    <!-- 加入會員圖文 -->
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 90px;
+        }
+
+        #newfeash {
+            text-align: center;
+            font-size: 30px;
+            padding-top: 30px;
+            margin: 5px;
+            padding-bottom: 30px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 40px;
+            padding-top: 0px;
+        }
+
+        #centertext {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 10px;
+        }
+
+        .numberimg {
+            filter: brightness(50%);
+        }
+
+        .btnnumber:hover {
+            /* text-align: center; */
+            background-color: brown;
+        }
+    </style>
+
+   
+
+
+
+
+</head>
+
+<body>
+
+    <div class="marqee " style="background-color: rgb(92, 42, 3); text-align: center; 
+    font-weight: bolder">
+        <ul>
+            <li>歡迎光臨</li>
+            <li>參峰烘焙坊</li>
+            <li>當天現做</li>
+            <li>限量販售</li>
+            <li>要買要快呦</li>
+            <li>參峰烘焙坊</li>
+            <li>讓您越吃越順口</li>
+        </ul>
+    </div>
+    <nav class="navbar container-fluid sticky-top inline-block col-12 d-flex justify-content-center">
+        <!-- <div><img class="logo inline-block " src="./小LOGO-2.png"></div> -->
+        <!-- 問題已解決：因為畫布大小要設置成語圖片同樣寬高，才不會有留白現象 -->
+        <div class="col-3" title="歡迎收藏">
+            <img data-bs-toggle="popover8" src="./小LOGO-5.png" style="width:20% ; height: 20%;">
+            <script>
+                const popover8TriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+                const popover8List = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+            </script>
+        </div>
+        <div class="list col-6">
+            <ul class="drop-down-menu">
+                <li class="drop"><a href="../1.首頁/首頁.html">
+                        <h6>首頁</h6>
+                    </a></li>
+                <li class="drop"><a href="../2.熱銷產品/熱銷產品.html">
+                        <h6>熱銷產品</h6>
+                    </a></li>
+                <li class="drop">
+                    <div>
+                        <a href="../3.所有產品/3.1所有產品.html">
+                            <h6>所有產品</h6>
+                        </a>
+                    </div>
+                    <div class="overflow" style="background-color: rgb(131, 71, 11);">
+                        <ul class="dropdown">
+                            <li><a href="../3.所有產品/3..1.2麵包蛋糕.html">
+                                    <h6>麵包蛋糕</h6>
+                                </a></li>
+                            <li><a href="../3.所有產品/3.1.1鋒味飲品.html">
+                                    <h6>鋒味飲品</h6>
+                                </a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="drop"><a href="../4.加入會員/加入會員.html">
+                        <h6>加入會員</h6>
+                    </a></li>
+                <li class="drop"><a href="../5.客服中心/客服專區.html">
+                        <h6>客服專區</h6>
+                    </a></li>
+            </ul>
+        </div>
+        <div class=" col-3">
+            <input type="text" class="search" placeholder="search..."
+                style="background-color:#e3d6c5; margin-right:5px;">
+            <svg style="height: 10%; width:10%; margin-right:10px; margin-left:10px;" xmlns="http://www.w3.org/2000/svg"
+                width="16" height="16" fill="currentColor" class="bi bi-person-bounding-box" viewBox="0 0 16 16">
+                <path
+                    d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5z" />
+                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+            </svg>
+            <svg style="height: 10%; width:10%" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                <path
+                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+            </svg>
+        </div>
+
+    </nav>
+
+    <div class="container-fluid d-flex justify-content-center" style="position: relative;">
+        <img class="numberimg" src="./會員背景圖.jpg" style="width:80%; height: 80%;">
+        <div id="centertext" class="row  container d-flex justify-content-center" style="color:#fff; font-weight:bold ">
+            <h1>參鋒烘焙</h1>
+            <h1>LINE 會員</h1>
+            <h6 id="newfeash">最新優惠活動，盡在會員世界，品嘗新鮮滋味</h6>
+            <button data-bs-toggle="modal" data-bs-target="#apple" class="btnnumber btn btn-info"
+                style="width: 500px; border-radius: 50px; background-color: chocolate;">
+                <h2>馬上點擊加入會員</h2>
+            </button>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- 回頂部 -->
+    <a href="#top"><svg
+            style="position: fixed; right:0; bottom: 0; display: block; border-radius: 10px; height: 50px; width: 50px; color: aliceblue; background-color: rgba(0, 0, 0, 0.856);"
+            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
+        </svg></a>
+
+
+
+
+
+
+    <!-- 會員modul -->
+
+    <div data-bs-backdrop="static" id="apple" class="modal" tabindex="-5">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-center">
+                    <h5 class="modal-title">LINE 會員</h5>
+                    <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                </div>
+                <div class="modal-body d-flex justify-content-center">
+                    <img src="./二維碼.png" style="height: 50%; width: 50%;" alt="">
+                    <!-- <p>Modal body text goes here.</p> -->
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button type="button" class="btn btn-secondary " data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="container">
+        <footer class="d-flex flex-nowrap justify-content-between align-items-center py-3 my-4 border-top"
+            style="background-color: rgba(105, 105, 105, 0.126); ">
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="/" class="mb-3 me-1 mb-md-0 text-muted text-decoration-none lh-1 ">
+                    <svg class="bi" width="30" height="24">
+                        <use xlink:href="#bootstrap" />
+                    </svg>
+                </a>
+                <div class="row ">
+                    <p class="text-muted" style="width: 500px; ">CopyRight &copy;
+                        金鋒烘焙坊
+                        Design by QiQi</p>
+                    <p class="text-muted color" style="width: 500px; color: #000000;">客服專線：(02)6666-8888</p>
+                    <p class=" text-muted" style="width: 500px;">客服信箱：QiQiforyoy@breadsweet.com.tw</p>
+                </div>
+        </footer>
+    </div>
+
+
+
+</body>
+
+</html>
+
+<!-- https://www.796t.com/content/1545419539.html -->
+<!-- https://www.casper.tw/development/2020/10/12/frosted-glass/ -->
